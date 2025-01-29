@@ -1,0 +1,127 @@
+.container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 97vh;
+    font-family: "Lexend Giga", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #a9dbfd;
+    border-radius: 20px;
+    gap: 40px;
+}
+
+.container h1{
+    font-size: 30px;
+}
+
+.cadastro{
+    /* border: 2px red solid; */
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cadastro form{
+    width: 95%;
+    /* border: 2px red solid; */
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.cadastro form input{
+    width: 150px;
+    height: 22px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+}
+
+.cadastro form button{
+    width: 15%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    background-color: greenyellow;
+    border: none;
+    transition:  transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.cadastro form button:hover{
+    box-shadow: 5px 5px 10px -3px #000;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.tabela2{
+    width: 98%;
+    /* border: 2px red solid;  */
+}
+
+.tabela2 table {
+    width: 100%;
+    background-color: transparent; 
+    text-align: left;
+}
+
+.tabela2 th, td {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.tabela2 th {
+    background-color: #4169e1;
+    font-weight: bold;
+}
+
+.tabela2 td {
+    color: black;
+}
+
+.tabela2 svg{
+    width: 20px;
+    height: 50px;
+    transition:  transform 0.3s ease, color 0.3s ease;
+}
+
+.tabela2 svg:hover{
+    color: red;
+    transform:  scale(1.1);
+    cursor: pointer;
+}
+
+.botao{
+    margin-bottom: 20px;
+    width: 16%;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 13px;
+    background-color: white;
+    border: none;
+    transition:  transform 0.3s ease, background-color 0.3s ease,  box-shadow 0.3s ease;
+}
+
+
+.botao:hover{
+    background-color: #4169e1;
+    box-shadow: 5px 5px 10px -3px #000;
+    transform: scale(1.1);
+}
+
+.arrow{
+    cursor: pointer;
+    transition:  transform 0.3s ease
+}
+
+.arrow:hover{
+    transform: scale(1.3);
+}
+
