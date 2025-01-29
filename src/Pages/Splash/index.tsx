@@ -27,7 +27,7 @@ function Splash() {
         <div className={`About fade-in-section ${islogoVisible ? 'is-visible' : ''}`}
           ref={logoref} >
           <div className={style.logo}>
-            <h1>Consult</h1>
+            <img src="/LOGO CONSULT.png" alt="" />
             <h2>Sistema de Consulta</h2>
           </div>
         </div>
