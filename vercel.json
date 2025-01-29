@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      { "source": "/Admin", "destination": "/index.html" },
+      { "source": "/Consultas", "destination": "/index.html" },
+      { "source": "/Login", "destination": "/index.html" },
+      { "source": "/:path*", "destination": "/index.html" }
+    ]
+  }
+  
