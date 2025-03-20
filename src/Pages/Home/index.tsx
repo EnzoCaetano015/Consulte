@@ -84,6 +84,7 @@ function Home() {
                             value={nome}
                             onChange={(e) => setNome(e.target.value)}
                             required
+                            placeholder="visu ou adm"
                         />{" "}
                         <br />
                         <label htmlFor="senha">
@@ -96,6 +97,7 @@ function Home() {
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)}
                             required
+                            placeholder="12345"
                         />{" "}
                         <br />
                         <button>Entrar</button>
