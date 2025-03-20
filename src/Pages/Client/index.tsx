@@ -4,6 +4,7 @@ import * as XLSX from "xlsx"; // 📌 Importação para exportação do Excel
 import styles from "./Client.module.css";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { URL } from "../../Config/config";
 
 const CARGO = ["Todos os cargos", "Advogado", "Administrador", "Desenvolvedor", "Designer"];
 const IDADE = ["Todos as idades", "18 a 25", "25 a 40", "40 a 60", "60+"];
@@ -37,7 +38,7 @@ function Client() {
     const [estadosDisponiveis, setEstadosDisponiveis] = useState<string[]>([]); // Lista de estados únicos
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/usuarios")
+        axios.get(`${URL}usuarios`)
             .then(response => {
                 const usuarios: Usuario[] = response.data; // 🚀 Informando o tipo corretamente
                 setUsuarios(usuarios);

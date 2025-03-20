@@ -8,6 +8,8 @@ import useInView from "../../Hook";
 import "../../Hook/Hook.css"
 import { useNavigate } from "react-router-dom";
 
+import { URL } from "../../Config/config";
+
 // 📌 Definição da interface do usuário
 interface Usuario {
     idCliente: number;
@@ -41,7 +43,7 @@ function Admin() {
     // 📌 Função para carregar os usuários do banco (5 em 5)
     const carregarUsuarios = async () => {
         try {
-            const response = await axios.get(`http://localhost:8000/api/dados-recentes?offset=${offset}`);
+            const response = await axios.get(`${URL}dados-recentes?offset=${offset}`);
             setUsuarios((prev) => [...prev, ...response.data]);
             setOffset((prevOffset) => prevOffset + 2); // Atualiza corretamente o offset
         } catch (error) {
@@ -58,7 +60,7 @@ function Admin() {
     const cadastrarUsuario = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:8000/api/dados", {
+            await axios.post(`${URL}dados`, {
                 nome,
                 cargo,
                 idade,
@@ -92,7 +94,7 @@ function Admin() {
         if (!confirmacao) return;
 
         try {
-            await axios.delete(`http://localhost:8000/api/dados/${idCliente}`);
+            await axios.delete(`${URL}dados/${idCliente}`);
             alert("Usuário excluído com sucesso!");
             window.location.reload();
             setUsuarios(usuarios.filter(usuario => usuario.idCliente !== idCliente));
